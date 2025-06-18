@@ -2,11 +2,11 @@
   "name": "education",
   "version": "1.0.0",
   "description": "Education Website",
-  "main": "backend/server.js",
+  "main": "server.js",
   "scripts": {
     "dev": "concurrently \"nodemon backend/server.js\" \"npm start --prefix frontend\"",
     "build": "npm install && npm install --include=dev --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
