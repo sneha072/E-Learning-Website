@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import baseUrl from './baseUrl/baseUrl'; // ✅ import added
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,7 +15,7 @@ const queryClient = new QueryClient({
   },
 });
 
-
+console.log("API Base URL:", baseUrl); // ✅ optional debug
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,5 +27,3 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>
 );
-
-
