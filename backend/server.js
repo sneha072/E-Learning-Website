@@ -27,7 +27,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: true,
+        origin: 'https://sneha072.github.io',
         credentials: true,
     }
 ));
