@@ -26,7 +26,7 @@ const __dirname = path.resolve();
 const app = express();
 
 const allowedOrigins = [
-  'https://e-learning-website-lime.vercel.app' // ✅ your frontend
+  'https://e-learning-website-lime.vercel.app', // ✅ your frontend
   'https://e-learning-website-cyr5-cawgiogms-snehas-projects-f234f79d.vercel.app' // ✅ new deploy
 
 ];
