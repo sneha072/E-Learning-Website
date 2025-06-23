@@ -25,7 +25,7 @@ const App = () => {
     queryKey : ['authUser'],
     queryFn : async () => {
       try {
-        const res = await fetch(`${baseUrl}/api/auth/me`, { // ✅ FIXED
+        const res = await fetch(`${baseUrl}/auth/me`, { // ✅ FIXED
           credentials: 'include',
         })
         const data = await res.json()
