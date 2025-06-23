@@ -26,20 +26,21 @@ const __dirname = path.resolve();
 const app = express();
 
 const allowedOrigins = [
-  'https://e-learning-website-lime.vercel.app',
-  // 'https://e-learning-website-kv7w.onrender.com'  // ✅ your current Vercel frontend URL
-  ];
-  
-  app.use(cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    credentials: true,
-  }));
+  'https://e-learning-website-lime.vercel.app' // ✅ your frontend
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.log("Blocked origin:", origin); // debug
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true,
+}));
+
   
 
 app.use(express.json({limit :"5mb"}))
