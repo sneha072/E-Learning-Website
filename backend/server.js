@@ -27,7 +27,7 @@ const app = express();
 
 app.use(cors(
     {
-        origin: 'https://sneha072.github.io',
+        origin: 'https://e-learning-website-622w.vercel.app',
         credentials: true,
     }
 ));
