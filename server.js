@@ -27,7 +27,7 @@ const app = express();
 
 const allowedOrigins = [
   'https://e-learning-website-lime.vercel.app',
-  'https://e-learning-website-kv7w.onrender.com'  // ✅ your current Vercel frontend URL
+  // 'https://e-learning-website-kv7w.onrender.com'  // ✅ your current Vercel frontend URL
   ];
   
   app.use(cors({
