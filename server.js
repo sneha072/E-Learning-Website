@@ -29,6 +29,8 @@ const allowedOrigins = [
   'https://e-learning-website-lime.vercel.app', // ✅ your frontend
   'https://e-learning-website-cyr5-cawgiogms-snehas-projects-f234f79d.vercel.app',// ✅ new deploy
   'https://e-learning-website-cydz0axit-snehas-projects-f234f79d.vercel.app', // ✅ current
+  'https://e-learning-website-cyr5.vercel.app', // ✅ this is the new one that caused error
+
   /^https:\/\/.*\.vercel\.app$/  // ✅ allow any Vercel preview domain (optional for dev)
 ];
 
