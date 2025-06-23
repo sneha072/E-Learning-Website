@@ -27,8 +27,9 @@ const app = express();
 
 const allowedOrigins = [
   'https://e-learning-website-lime.vercel.app', // ✅ your frontend
-  'https://e-learning-website-cyr5-cawgiogms-snehas-projects-f234f79d.vercel.app' // ✅ new deploy
-
+  'https://e-learning-website-cyr5-cawgiogms-snehas-projects-f234f79d.vercel.app',// ✅ new deploy
+  'https://e-learning-website-cydz0axit-snehas-projects-f234f79d.vercel.app', // ✅ current
+  /^https:\/\/.*\.vercel\.app$/  // ✅ allow any Vercel preview domain (optional for dev)
 ];
 
 app.use(cors({
