@@ -5,6 +5,8 @@ import generateTokenSetCookie from "../utils/generateToken.js";
 //signup controller 
 export const signUp = async (req, res) => {
     try {
+        console.log("Incoming signup request:", req.body);
+
         const { email, password, fullName } = req.body;
         if (!email || !password || !fullName) {
             return res.status(400).json({message: "Please fill all the fields"});
@@ -26,10 +28,10 @@ export const signUp = async (req, res) => {
             res.status(201).json({message: "User created successfully"});
         }
     } catch (error) {
-        console.log(`Error in signUp Controller: ${error}`);
-        res.status(500).json({message: error}); 
+        console.log(`Error in signUp Controller: ${error.message}`);
+        res.status(500).json({ message: error.message || "Internal Server Error" }); 
     }
-}
+};
 
 //login controller
 export const login = async (req, res) => {
