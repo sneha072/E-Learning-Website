@@ -25,12 +25,21 @@ const __dirname = path.resolve();
 
 const app = express();
 
-app.use(cors(
-    {
-        origin: 'https://e-learning-website-622w.vercel.app',
-        credentials: true,
-    }
-));
+const allowedOrigins = [
+    'https://e-learning-website-cyr5.vercel.app', // ✅ your current Vercel frontend URL
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  }));
+  
 
 app.use(express.json({limit :"5mb"}))
 app.use(cookieParser());
