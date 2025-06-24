@@ -26,7 +26,7 @@ const __dirname = path.resolve();
 const app = express();
 
 const allowedOrigins = [
-  // 'https://e-learning-website-lime.vercel.app', // ✅ your frontend
+  'https://e-learning-website-lime.vercel.app', // ✅ your frontend
   /^https:\/\/e-learning-website-[\w-]+\.vercel\.app$/, // match dynamic Vercel URLs
 
 ];
