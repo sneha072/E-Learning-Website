@@ -1,5 +1,5 @@
 import express from 'express';
-import { getAllCourses , createCourse , getCourseById,createComment,deteleComment,createNote, getNotes } from '../contollers/course.controller.js';
+import { getAllCourses , createCourse , getCourseById,createComment,deteleComment,createNote, getNotes } from '../controllers/course.controller.js';
 import { protectRoute } from '../middleware/protectRoute.js';   
 
 

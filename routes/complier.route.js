@@ -1,5 +1,5 @@
 import express from 'express';
-import { complier , creditBalance } from '../contollers/complier.controller.js';
+import { complier , creditBalance } from '../controllers/complier.controller.js';
 
 const router = express.Router();
 
