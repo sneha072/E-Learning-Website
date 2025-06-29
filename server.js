@@ -26,27 +26,24 @@ const app = express();
 
 // ✅ CORS Setup: allow all dynamic Vercel URLs for this project
 const allowedOrigins = [
-  'https://e-learning-website-622w.vercel.app',
-  /^https:\/\/e-learning-website-[\w-]+\.vercel\.app$/,
+  'http://localhost:3000',
+  'https://frontend-gules-theta-82.vercel.app', // ✅ Your live frontend
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true); // Allow Postman, curl, etc.
+    if (!origin) return callback(null, true); // Allow tools like Postman
 
-    const isAllowed = allowedOrigins.some(o =>
-      typeof o === 'string' ? o === origin : o.test(origin)
-    );
-
-    if (isAllowed) {
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
-      console.log('Blocked origin:', origin);
+      console.log('❌ Blocked by CORS:', origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
   credentials: true,
 }));
+
 
 app.use(express.json({ limit: "5mb" }));
 app.use(cookieParser());
